@@ -1,0 +1,52 @@
+@use 'variables';
+
+
+html {
+	font-size: 18px;
+}
+
+body {
+	background-color: variables.$color-bg;
+	color: variables.$color-text;
+
+	font-family: variables.$font-family;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+header {
+	background-color: variables.$color-bg;
+	padding: 2rem;
+	padding-left: 2.8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.header_logo { 
+	color: variables.$color-text;
+	font-size: 1.1rem;	
+	}
+
+	.header_menu {
+		color: variables.$color-muted;
+		padding-right: 2rem;
+	}
+
+	.header_menu_ul {
+		display: flex;
+		gap: 1rem;
+
+		> li > a {
+			font-size: 0.7rem;
+			font-weight: 500;
+			transition: color 0.3s ease;
+
+			&:hover { // Обращаемся к предыдущей вложенности и применяем псевдо элемент
+				color: variables.$color-text;
+			}
+		}
+	}
+}
+
+
