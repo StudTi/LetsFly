@@ -1,4 +1,4 @@
-header {
+.header {
   background-color: variables.$color-bg;
   padding: 2rem;
   padding-left: 2.8rem;
@@ -6,17 +6,17 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  .header_logo {
+  &__logo {
     color: variables.$color-text;
     font-size: 1.1rem;
   }
 
-  .header_menu {
+  &__menu {
     color: variables.$color-muted;
     padding-right: 2rem;
   }
 
-  .header_menu_ul {
+  &__menu_links {
     display: flex;
     gap: 1rem;
 

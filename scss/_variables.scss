@@ -34,7 +34,7 @@ $color-success: var(--color-success);
 $color-error: var(--color-error);
 $color-warning: var(--color-warning);
 
-@mixin btn {
+@mixin welcome_cta {
   border: {
     radius: 1.5rem;
   }
