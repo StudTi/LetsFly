@@ -34,3 +34,21 @@ $color-success: var(--color-success);
 $color-error: var(--color-error);
 $color-warning: var(--color-warning);
 
+@mixin btn {
+  border: {
+    radius: 1.5rem;
+  }
+
+  font: {
+    weight: 550;
+    size: 0.75rem;
+  }
+
+  padding: 0.5rem 1.2rem; // 0.5 со всех сторон, 0.7 с боков
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); // тени у кнопки
+
+  &:hover {
+    background-color: #dbdbdb;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  }
+}

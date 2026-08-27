@@ -1,0 +1,22 @@
+@import 'variables';
+
+main {
+  .btn {
+    @include btn;
+    background-color: variables.$color-block;
+    text-align: center;
+    color: #111;
+    transition: background-color 0.4s ease;
+  }
+
+  .btn_primary {
+    @include btn;
+    background-color: #16171c;
+    color: variables.$color-block;
+      transition: background-color 0.4s ease; // для плавности переходов между двумя разными состояниями элемента
+
+    &:hover {
+      color: variables.$color-text;
+    }
+  }
+}
