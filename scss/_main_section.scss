@@ -1,43 +1,45 @@
 .welcome {
+	&__information {
+	}
 
-  &__information {
+	&__text {
+		text-align: center;
+		font-weight: 500;
+	}
 
-  }
+	// PERSONAL JETS
+	&__sub-text {
+		color: $color-muted;
+		font-size: 0.6rem;
+	}
 
-  &__text {
-    text-align: center;
-    font-weight: 500;
-  }
+	// Luxury
+	&__title {
+		color: $color-muted;
+		font-size: 3.5rem;
+		padding-top: 0rem;
+		margin-top: -1.3rem;
+	}
 
-  // PERSONAL JETS
-  &__sub-text {
-    color: $color-muted;
-    font-size: 0.6rem;
-  }
+	// Affordable
+	&__second_title {
+		color: #111;
+		font-size: 3.5rem;
+		margin-top: -1.8rem;
+	}
 
- // Luxury 
-  &__title {
-    color: $color-muted;
-    font-size: 3.5rem;
-    padding-top: 0rem;
-  }
+	&__motto {
+		color: #111;
+		font-size: 0.7rem;
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
 
-  // Affordable
-  &__second_title {
-    color: #111;
-    font-size: 3.5rem;
-  }
-
-  &__motto {
-    color: #111;
-    font-size: 0.7rem;
-    font-weight: 500;
-  }
-
-  &__cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8 rem;
-    margin: 0 auto;  }
+	&__cta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8 rem;
+		margin: 0 auto;
+	}
 }
