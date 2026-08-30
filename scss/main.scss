@@ -19,6 +19,12 @@ button {
 	cursor: pointer; // вид курсора при наведении на кнопку
 }
 
+.container {
+	max-width: 1650px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 @import 'header';
 @import 'ui';
 @import 'main_section';

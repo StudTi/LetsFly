@@ -1,16 +1,24 @@
 .welcome {
+  position: relative;
+  height: 80vh; // 100vh - размер нашей страницы, которую мы видим при открывании 
+
 	&__information {
+    text-align: center;
 	}
 
 	&__text {
-		text-align: center;
-		font-weight: 500;
+		position: relative;
+    z-index: 1; // для вынесения текста на передний план, чтобы была возможность выделить его, не работает без position: relative
+    font-weight: 500;
+
 	}
 
 	// PERSONAL JETS
 	&__sub-text {
-		color: $color-muted;
+		// color: $color-muted;
+    opacity: 0.9; // прозрачность текста
 		font-size: 0.6rem;
+    text-transform: uppercase; // все буквы заглавные
 	}
 
 	// Luxury
@@ -18,14 +26,16 @@
 		color: $color-muted;
 		font-size: 3.5rem;
 		padding-top: 0rem;
-		margin-top: -1.3rem;
+		// margin-top: -1.3rem;
+    line-height: 0.8; // расстояние между строками
 	}
 
 	// Affordable
 	&__second_title {
 		color: #111;
 		font-size: 3.5rem;
-		margin-top: -1.8rem;
+    line-height: 1.1;
+		// margin-top: -1.8rem;
 	}
 
 	&__motto {
@@ -42,4 +52,12 @@
 		gap: 0.8 rem;
 		margin: 0 auto;
 	}
+
+  &__plane {  
+    position: absolute; // прикрепили к position: relative
+    top: 0;
+    width: 92%;
+  }
+
+
 }
