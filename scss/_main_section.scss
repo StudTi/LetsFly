@@ -1,21 +1,24 @@
 .welcome {
   position: relative;
-  height: 80vh; // 100vh - размер нашей страницы, которую мы видим при открывании 
+	justify-content: center;
+	align-items: center;
+	min-height: 70vh; // 100vh - стандартно, размер нашей страницы, которую мы видим при открывании
+	display: flex;
 
 	&__information {
+		position: relative;
     text-align: center;
+		z-index: 1; // для вынесения текста на передний план, чтобы была возможность выделить его, не работает без position: relative
+		width: 40%;
+		margin: auto;
 	}
 
 	&__text {
-		position: relative;
-    z-index: 1; // для вынесения текста на передний план, чтобы была возможность выделить его, не работает без position: relative
     font-weight: 500;
-
 	}
 
 	// PERSONAL JETS
 	&__sub-text {
-		// color: $color-muted;
     opacity: 0.9; // прозрачность текста
 		font-size: 0.6rem;
     text-transform: uppercase; // все буквы заглавные
@@ -26,7 +29,6 @@
 		color: $color-muted;
 		font-size: 3.5rem;
 		padding-top: 0rem;
-		// margin-top: -1.3rem;
     line-height: 0.8; // расстояние между строками
 	}
 
@@ -35,9 +37,9 @@
 		color: #111;
 		font-size: 3.5rem;
     line-height: 1.1;
-		// margin-top: -1.8rem;
 	}
 
+	// Дивиз компании
 	&__motto {
 		color: #111;
 		font-size: 0.7rem;
@@ -45,6 +47,7 @@
 		margin-bottom: 1rem;
 	}
 
+	// Кнопки
 	&__cta {
 		display: flex;
 		align-items: center;
@@ -53,11 +56,17 @@
 		margin: 0 auto;
 	}
 
+	// Самолет 
   &__plane {  
     position: absolute; // прикрепили к position: relative
-    top: 0;
-    width: 92%;
-  }
+		bottom: 0;
+		max-width: 100%;
+		height: auto;
+		margin-top: 0;
+		z-index: 0;
+		pointer-events: none; // делает элемент полностью невидимым для курсора 
+		user-select: none; // убирает любые взаимодействия с картинкой
+	}
 
 
 }
