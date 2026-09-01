@@ -2,7 +2,7 @@
   position: relative;
 	justify-content: center;
 	align-items: center;
-	min-height: 70vh; // 100vh - стандартно, размер нашей страницы, которую мы видим при открывании
+	min-height: 55vh; // 100vh - стандартно, размер нашей страницы, которую мы видим при открывании
 	display: flex;
 
 	&__information {
@@ -44,7 +44,8 @@
 		color: #111;
 		font-size: 0.7rem;
 		font-weight: 500;
-		margin-bottom: 1rem;
+		margin-bottom: 0.8rem;
+		line-height: 2;
 	}
 
 	// Кнопки
@@ -59,14 +60,67 @@
 	// Самолет 
   &__plane {  
     position: absolute; // прикрепили к position: relative
-		bottom: 0;
-		max-width: 100%;
+		bottom: -22rem;
+		max-width: 85%;
 		height: auto;
 		margin-top: 0;
-		z-index: 0;
+		z-index: 1;
 		pointer-events: none; // делает элемент полностью невидимым для курсора 
 		user-select: none; // убирает любые взаимодействия с картинкой
 	}
 
+	// Облака
+	&__clouds {
+		position: absolute;
+		height: 100%; // выравнивает элемент относительно высоты родителя (information)
+		width: 100%; // ширина элементов
+		top: 0;
+		left: 0;
+		z-index: 0;
 
+		> img {
+			position: absolute;
+			pointer-events: none;
+			user-select: none;
+
+			//left cloud
+			&:nth-child(1) {
+				top: -8rem;
+				left: -12rem;
+				width: 25vw;
+			}
+
+			//main cloud
+			&:nth-child(2) {
+				top: 0rem;
+				left: 49%;
+				transform: translateX(-50%);
+				width: 60vw;
+			}
+
+			//right cloud
+			&:nth-child(3) {
+				top: -5rem;
+				right: -10rem;
+				width: 25vh;
+				transform: rotate(270deg);
+			}
+		}
+	}
+
+//! Temporarily out of service !!!
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: -8rem;
+		z-index: 2;	
+		background: radial-gradient(
+			ellipse at 50% 30%, 
+			rgba(110, 135, 175, 0.07) 0%,
+			transparent 75%
+		);
+		pointer-events: none;
+	}
 }
