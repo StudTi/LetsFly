@@ -20,14 +20,14 @@
 	// PERSONAL JETS
 	&__sub-text {
     opacity: 0.9; // прозрачность текста
-		font-size: 0.6rem;
+		font-size: 0.7rem;
     text-transform: uppercase; // все буквы заглавные
 	}
 
 	// Luxury
 	&__title {
 		color: $color-muted;
-		font-size: 3.5rem;
+		font-size: 5rem;
 		padding-top: 0rem;
     line-height: 0.8; // расстояние между строками
 	}
@@ -35,17 +35,17 @@
 	// Affordable
 	&__second_title {
 		color: #111;
-		font-size: 3.5rem;
+		font-size: 5rem;
     line-height: 1.1;
 	}
 
 	// Дивиз компании
 	&__motto {
 		color: #111;
-		font-size: 0.7rem;
+		font-size: 0.9rem;
 		font-weight: 500;
 		margin-bottom: 0.8rem;
-		line-height: 2;
+		line-height: 2.5;
 	}
 
 	// Кнопки
@@ -53,15 +53,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 0.8 rem;
+		gap: 0.7rem;
 		margin: 0 auto;
 	}
 
 	// Самолет 
   &__plane {  
     position: absolute; // прикрепили к position: relative
-		bottom: -22rem;
-		max-width: 85%;
+		bottom: -23rem;
+		max-width: 90%;
 		height: auto;
 		margin-top: 0;
 		z-index: 1;
@@ -108,7 +108,7 @@
 		}
 	}
 
-//! Temporarily out of service !!!
+// Оттенок на заднем фоне
 	&::after {
 		content: '';
 		position: absolute;
