@@ -1,49 +1,48 @@
 @import 'variables';
 .welcome {
+	// Learn more
+	&__btn {
+		@include welcome_cta;
+		text-align: center;
+		color: #111;
+		transition: background-color 0.4s ease;
+		background-color: variables.$color-block;
+	}
 
-  // Learn more
-  &__btn {
-    @include welcome_cta;
-    text-align: center;
-    color: #111;
-    transition: background-color 0.4s ease;
-    background-color: variables.$color-block;
-    }
-  }
+	// Let's Fly
+	&__btn_primary {
+		@include welcome_cta;
+		background-color: #16171c;
+		color: variables.$color-block;
+		transition: background-color 0.4s ease; // для плавности переходов между двумя разными состояниями элемента
+	}
 
-  // Let's Fly
-  &__btn_primary {
-    @include welcome_cta;
-    background-color: #16171c;
-    color: variables.$color-block;
-      transition: background-color 0.4s ease; // для плавности переходов между двумя разными состояниями элемента
+	&:hover {
+		color: variables.$color-text;
+		background-color: variables.$color-block;
+	}
+}
 
-    &:hover {
-      color: variables.$color-text;
-      background-color: variables.$color-block;
-    }
-  }
-
-  &__gray {
-    background-color: #dcdde3;
-    color: #32323a;
-  }
-
+// .advantages {
+// 	@include gray_cta;
+// 	&__button {
+// 		background-color: #dcdde3;
+// 		color: #32323a;
+// 	}
+// }
 
 // PERSONAL JETS
 .sub-title {
-  opacity: 0.9; // прозрачность текста
-  font-size: 0.7rem;
-  text-transform: uppercase; // все буквы заглавные
+	opacity: 0.9; // прозрачность текста
+	font-size: 0.7rem;
+	text-transform: uppercase; // все буквы заглавные
 }
 
 // Описание компании
 .description {
-  color: #111;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-  line-height: 2.5;
+	color: #111;
+	font-size: 0.9rem;
+	font-weight: 500;
+	margin-bottom: 0.8rem;
+	line-height: 2.5;
 }
-
-

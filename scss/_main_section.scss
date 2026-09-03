@@ -1,5 +1,5 @@
 .welcome {
-  position: relative;
+	position: relative;
 	justify-content: center;
 	align-items: center;
 	min-height: 55vh; // 100vh - стандартно, размер нашей страницы, которую мы видим при открывании
@@ -7,14 +7,14 @@
 
 	&__information {
 		position: relative;
-    text-align: center;
+		text-align: center;
 		z-index: 1; // для вынесения текста на передний план, чтобы была возможность выделить его, не работает без position: relative
 		width: 40%;
 		margin: auto;
 	}
 
 	&__text {
-    font-weight: 500;
+		font-weight: 500;
 	}
 
 	// Luxury
@@ -22,14 +22,14 @@
 		color: $color-muted;
 		font-size: 5rem;
 		padding-top: 0rem;
-    line-height: 0.8; // расстояние между строками
+		line-height: 0.8; // расстояние между строками
 	}
 
 	// Affordable
 	&__second_title {
 		color: #111;
 		font-size: 5rem;
-    line-height: 1.1;
+		line-height: 1.1;
 	}
 
 	// Кнопки
@@ -41,15 +41,15 @@
 		margin: 0 auto;
 	}
 
-	// Самолет 
-  &__plane {  
-    position: absolute; // прикрепили к position: relative
+	// Самолет
+	&__plane {
+		position: absolute; // прикрепили к position: relative
 		bottom: -23rem;
 		max-width: 90%;
 		height: auto;
 		margin-top: 0;
 		z-index: 1;
-		pointer-events: none; // делает элемент полностью невидимым для курсора 
+		pointer-events: none; // делает элемент полностью невидимым для курсора
 		user-select: none; // убирает любые взаимодействия с картинкой
 	}
 
@@ -92,16 +92,16 @@
 		}
 	}
 
-// Оттенок на заднем фоне
+	// Оттенок на заднем фоне
 	&::after {
 		content: '';
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: -8rem;
-		z-index: 2;	
+		z-index: 2;
 		background: radial-gradient(
-			ellipse at 50% 30%, 
+			ellipse at 50% 30%,
 			rgba(110, 135, 175, 0.07) 0%,
 			transparent 75%
 		);

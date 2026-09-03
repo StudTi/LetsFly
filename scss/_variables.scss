@@ -1,19 +1,19 @@
 :root {
-  --color-bg: #eaebef;
-  --color-block: #fff;
-  --color-text: #383844;
-  --color-muted: #6e6f77;
+	--color-bg: #eaebef;
+	--color-block: #fff;
+	--color-text: #383844;
+	--color-muted: #6e6f77;
 
-  --color-accent: #ff5c00;
-  --color-accent-hover: #e14c08;
+	--color-accent: #ff5c00;
+	--color-accent-hover: #e14c08;
 
-  --color-border: #d1d1d6;
-  --color-shadow: rgba(0, 0, 0, 0.05);
-  --color-overlay: rgba(0, 0, 0, 0.1);
+	--color-border: #d1d1d6;
+	--color-shadow: rgba(0, 0, 0, 0.05);
+	--color-overlay: rgba(0, 0, 0, 0.1);
 
-  --color-success: #34c759;
-  --color-error: #ff3b30;
-  --color-warning: #ffcc00;
+	--color-success: #34c759;
+	--color-error: #ff3b30;
+	--color-warning: #ffcc00;
 }
 
 $font-family: 'Inter', sans-serif;
@@ -35,20 +35,39 @@ $color-error: var(--color-error);
 $color-warning: var(--color-warning);
 
 @mixin welcome_cta {
-  border: {
-    radius: 1.5rem;
-  }
+	border: {
+		radius: 1.5rem;
+	}
 
-  font: {
-    weight: 550;
-    size: 0.75rem;
-  }
+	font: {
+		weight: 550;
+		size: 0.75rem;
+	}
 
-  padding: 0.5rem 1.2rem; // 0.5 со всех сторон, 0.7 с боков
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); // тени у кнопки
+	padding: 0.5rem 1.2rem; // 0.5 со всех сторон, 0.7 с боков
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); // тени у кнопки
 
-  &:hover {
-    background-color: #dbdbdb;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-  }
+	&:hover {
+		background-color: #dbdbdb;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	}
+}
+
+@mixin gray_cta {
+	border: {
+		radius: 1.5rem;
+	}
+
+	font: {
+		weight: 550;
+		size: 0.75rem;
+	}
+
+	padding: 0.5rem 1.2rem; // 0.5 со всех сторон, 0.7 с боков
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); // тени у кнопки
+
+	&:hover {
+		background-color: #dbdbdb;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	}
 }
